@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Circle Holding — Business Model Canvas</title>
+  <style>
+    :root { color-scheme: light; --navy:#102a43; --blue:#1d70b8; --ink:#172b4d; --muted:#52606d; --line:#d9e2ec; --bg:#f5f7fa; --card:#fff; --accent:#f2a900; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif; color:var(--ink); background:var(--bg); }
+    .wrap { max-width:1240px; margin:0 auto; padding:40px 22px 56px; }
+    header { margin-bottom:24px; }
+    h1 { margin:0 0 8px; font-size:clamp(26px,4vw,42px); color:var(--navy); letter-spacing:-.02em; }
+    .lead { margin:0; max-width:760px; color:var(--muted); line-height:1.65; }
+    .canvas { display:grid; grid-template-columns:repeat(6,1fr); grid-template-areas:"partners activities value relationships segments segments" "partners resources value channels channels revenue" "cost cost cost cost cost revenue"; gap:14px; }
+    .card { background:var(--card); border:1px solid var(--line); border-top:4px solid var(--blue); border-radius:12px; padding:18px; box-shadow:0 5px 18px rgba(16,42,67,.06); min-height:170px; }
+    .card h2 { margin:0 0 10px; font-size:17px; color:var(--navy); }
+    .card p { margin:0; color:var(--muted); line-height:1.55; font-size:14px; }
+    .card ul { margin:0; padding-left:19px; color:var(--muted); line-height:1.65; font-size:14px; }
+    .partners{grid-area:partners}.activities{grid-area:activities}.value{grid-area:value;border-top-color:var(--accent)}.relationships{grid-area:relationships}.segments{grid-area:segments}.resources{grid-area:resources}.channels{grid-area:channels}.revenue{grid-area:revenue;border-top-color:var(--accent)}.cost{grid-area:cost;min-height:auto}
+    .strategy { margin-top:18px; padding:18px 20px; background:var(--navy); color:#fff; border-radius:12px; }
+    .strategy strong { color:#ffd166; }
+    .strategy p { margin:7px 0 0; line-height:1.6; color:#e6eef5; }
+    footer { margin-top:20px; color:var(--muted); font-size:12px; }
+    @media (max-width:900px) { .canvas { grid-template-columns:repeat(2,1fr); grid-template-areas:"segments segments" "value value" "partners activities" "resources channels" "relationships revenue" "cost cost"; } }
+    @media (max-width:560px) { .wrap { padding:26px 14px 40px; } .canvas { display:flex; flex-direction:column; } .card { min-height:auto; } }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <header>
+      <h1>Circle Holding — Business Model Canvas</h1>
+      <p class="lead">Operating Holding ที่ลงทุนและเข้าไปยกระดับการบริหาร เปลี่ยนธุรกิจที่พึ่งเจ้าของให้เป็นระบบที่วัดผล ทำซ้ำ และขยายได้</p>
+    </header>
+    <section class="canvas" aria-label="Business Model Canvas">
+      <article class="card partners"><h2>พันธมิตรหลัก</h2><ul><li>ทนายและนักบัญชี</li><li>ผู้สอบบัญชีและที่ปรึกษา</li><li>ธนาคารและนักลงทุนร่วม</li><li>ผู้เชี่ยวชาญรายอุตสาหกรรม</li></ul></article>
+      <article class="card activities"><h2>กิจกรรมหลัก</h2><ul><li>หาและคัดกรองดีล</li><li>ตรวจสอบกิจการ</li><li>วางแผน 100 วัน</li><li>วางระบบและติดตามผล</li></ul></article>
+      <article class="card value"><h2>คุณค่าที่เสนอ</h2><p>เงินทุนระยะยาวพร้อมความสามารถด้านบริหาร เพื่อทำให้ธุรกิจเป็นระบบ วัดผลได้ ทำซ้ำได้ และขยายได้</p></article>
+      <article class="card relationships"><h2>ความสัมพันธ์</h2><ul><li>ความไว้วางใจและความโปร่งใส</li><li>สื่อสารระยะยาว</li><li>แผนส่งต่อบทบาทชัดเจน</li><li>เจ้าของเชิงรุกกับผู้บริหาร</li></ul></article>
+      <article class="card segments"><h2>กลุ่มเป้าหมาย</h2><p>เจ้าของ SME ที่ต้องการทุน ผู้สืบทอด หรือทางออกจากธุรกิจ รวมถึงพันธมิตรและนักลงทุนร่วมทุน</p></article>
+      <article class="card resources"><h2>ทรัพยากรหลัก</h2><ul><li>เงินทุน</li><li>ทีมลงทุนและทีมปฏิบัติการ</li><li>ระบบข้อมูลและรายงาน</li><li>เครือข่ายและธรรมาภิบาล</li></ul></article>
+      <article class="card channels"><h2>ช่องทาง</h2><p>ทนาย นักบัญชี ผู้ประกอบการ ธนาคาร และพันธมิตรที่เชื่อมต่อเจ้าของธุรกิจและดีลที่เหมาะสม</p></article>
+      <article class="card revenue"><h2>รายได้</h2><ul><li>เงินปันผล</li><li>กระแสเงินสดจากบริษัทย่อย</li><li>มูลค่าหุ้นที่เพิ่มขึ้น</li><li>กำไรจากการขายเมื่อเหมาะสม</li></ul></article>
+      <article class="card cost"><h2>ต้นทุน</h2><p>เงินซื้อกิจการ บุคลากร การตรวจสอบดีล ที่ปรึกษา ระบบควบคุม และเงินทุนหมุนเวียนหรือการลงทุนปรับปรุงกิจการ</p></article>
+    </section>
+    <aside class="strategy"><strong>ตัวเลือกเชิงกลยุทธ์</strong><p>Core Holdings: ถือยาวเป็นหลัก · Opportunistic Exits: สร้างมูลค่าแล้วขายเมื่อคุ้มกว่า</p></aside>
+    <footer>สถานะ: โครงร่างสำหรับใช้คุยต่อ — ยังต้องยืนยันสมมติฐานและเกณฑ์แต่ละช่อง</footer>
+  </main>
+</body>
+</html>
