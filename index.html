@@ -21,9 +21,20 @@
     .strategy { margin-top:18px; padding:18px 20px; background:var(--navy); color:#fff; border-radius:12px; }
     .strategy strong { color:#ffd166; }
     .strategy p { margin:7px 0 0; line-height:1.6; color:#e6eef5; }
+    .snowball { margin-top:18px; padding:24px 18px; background:var(--card); border:1px solid var(--line); border-radius:12px; overflow:hidden; }
+    .snowball h2 { margin:0 0 6px; color:var(--navy); font-size:22px; text-align:center; }
+    .snowball-intro { margin:0 auto 22px; max-width:760px; color:var(--muted); line-height:1.55; text-align:center; }
+    .snowball-loop { display:flex; align-items:center; justify-content:center; gap:10px; margin:0; padding:0; list-style:none; }
+    .snowball-step { flex:0 0 auto; display:grid; place-content:center; aspect-ratio:1; padding:12px; text-align:center; border-radius:50%; background:#eaf3fb; color:var(--navy); border:2px solid #8ebee5; line-height:1.3; font-size:13px; font-weight:700; }
+    .snowball-step small { display:block; margin-top:5px; color:var(--muted); font-size:11px; font-weight:500; }
+    .snowball-step:nth-child(1){width:108px}.snowball-step:nth-child(3){width:124px}.snowball-step:nth-child(5){width:140px}.snowball-step:nth-child(7){width:156px}.snowball-step:nth-child(9){width:174px;background:#fff3d1;border-color:var(--accent)}
+    .snowball-arrow { flex:0 0 auto; color:var(--blue); font-size:24px; font-weight:700; }
+    .snowball-return { margin:20px auto 0; max-width:760px; padding:12px 16px; color:#e6eef5; background:var(--navy); border-radius:10px; text-align:center; line-height:1.5; }
+    .snowball-return strong { color:#ffd166; }
     footer { margin-top:20px; color:var(--muted); font-size:12px; }
     @media (max-width:900px) { .canvas { grid-template-columns:repeat(2,1fr); grid-template-areas:"segments segments" "value value" "partners activities" "resources channels" "relationships revenue" "cost cost"; } }
-    @media (max-width:560px) { .wrap { padding:26px 14px 40px; } .canvas { display:flex; flex-direction:column; } .card { min-height:auto; } }
+    @media (max-width:900px) { .snowball-loop { flex-direction:column; } .snowball-arrow { transform:rotate(90deg); } }
+    @media (max-width:560px) { .wrap { padding:26px 14px 40px; } .canvas { display:flex; flex-direction:column; } .card { min-height:auto; } .snowball { padding:22px 12px; } }
   </style>
 </head>
 <body>
@@ -44,6 +55,18 @@
       <article class="card cost"><h2>ต้นทุน</h2><p>เงินซื้อกิจการ บุคลากร การตรวจสอบดีล ที่ปรึกษา ระบบควบคุม และเงินทุนหมุนเวียนหรือการลงทุนปรับปรุงกิจการ</p></article>
     </section>
     <aside class="strategy"><strong>ตัวเลือกเชิงกลยุทธ์</strong><p>Core Holdings: ถือยาวเป็นหลัก · Opportunistic Exits: สร้างมูลค่าแล้วขายเมื่อคุ้มกว่า</p></aside>
+    <section class="snowball" aria-labelledby="snowball-title">
+      <h2 id="snowball-title">Circle Holding Snowball Loop</h2>
+      <p class="snowball-intro">แต่ละรอบต้องเพิ่มทั้งเงินสด ระบบ และทีมผู้บริหาร จึงจะทำให้ Circle ซื้อกิจการที่ดีหรือใหญ่ขึ้นได้โดยไม่เพิ่มความเสี่ยงเร็วกว่าความสามารถ</p>
+      <ol class="snowball-loop" aria-label="วงจรการเติบโตของ Circle Holding">
+        <li class="snowball-step">ทุนเริ่มต้น<small>ผู้ก่อตั้ง</small></li><li class="snowball-arrow" aria-hidden="true">→</li>
+        <li class="snowball-step">ซื้อกิจการดี<small>มีเงินสดแล้ว</small></li><li class="snowball-arrow" aria-hidden="true">→</li>
+        <li class="snowball-step">ส่งต่อและวางระบบ<small>คน · ข้อมูล · งาน</small></li><li class="snowball-arrow" aria-hidden="true">→</li>
+        <li class="snowball-step">เงินสดและมูลค่าเพิ่ม<small>ธุรกิจแข็งแรงขึ้น</small></li><li class="snowball-arrow" aria-hidden="true">→</li>
+        <li class="snowball-step">สำรองเงินและเสริมทีม<small>พร้อมดีลรอบถัดไป</small></li>
+      </ol>
+      <p class="snowball-return"><strong>↻ รอบถัดไป:</strong> ใช้เงินสด + ระบบ + ทีมที่แข็งแรงขึ้น ซื้อกิจการที่มีคุณภาพหรือขนาดใหญ่ขึ้น</p>
+    </section>
     <footer>สถานะ: โครงร่างสำหรับใช้คุยต่อ — ยังต้องยืนยันสมมติฐานและเกณฑ์แต่ละช่อง</footer>
   </main>
 </body>
