@@ -3,95 +3,116 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Circle Holding Company — Business Model Canvas</title>
-  <style>
-    :root { color-scheme: light; --navy:#102a43; --blue:#1d70b8; --ink:#172b4d; --muted:#52606d; --line:#d9e2ec; --bg:#f5f7fa; --card:#fff; --accent:#f2a900; }
-    * { box-sizing: border-box; }
-    body { margin:0; font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif; color:var(--ink); background:var(--bg); }
-    .wrap { max-width:1240px; margin:0 auto; padding:40px 22px 56px; }
-    header { margin-bottom:24px; }
-    h1 { margin:0 0 8px; font-size:clamp(26px,4vw,42px); color:var(--navy); letter-spacing:-.02em; }
-    .lead { margin:0; max-width:760px; color:var(--muted); line-height:1.65; }
-    .canvas { display:grid; grid-template-columns:repeat(6,1fr); grid-template-areas:"partners activities value relationships segments segments" "partners resources value channels channels revenue" "cost cost cost cost cost revenue"; gap:14px; }
-    .card { background:var(--card); border:1px solid var(--line); border-top:4px solid var(--blue); border-radius:12px; padding:18px; box-shadow:0 5px 18px rgba(16,42,67,.06); min-height:170px; }
-    .card h2 { margin:0 0 10px; font-size:17px; color:var(--navy); }
-    .card p { margin:0; color:var(--muted); line-height:1.55; font-size:14px; }
-    .card ul { margin:0; padding-left:19px; color:var(--muted); line-height:1.65; font-size:14px; }
-    .partners{grid-area:partners}.activities{grid-area:activities}.value{grid-area:value;border-top-color:var(--accent)}.relationships{grid-area:relationships}.segments{grid-area:segments}.resources{grid-area:resources}.channels{grid-area:channels}.revenue{grid-area:revenue;border-top-color:var(--accent)}.cost{grid-area:cost;min-height:auto}
-    .strategy { margin-top:18px; padding:18px 20px; background:var(--navy); color:#fff; border-radius:12px; }
-    .strategy strong { color:#ffd166; }
-    .strategy p { margin:7px 0 0; line-height:1.6; color:#e6eef5; }
-    .snowball { margin-top:18px; padding:24px 18px; background:var(--card); border:1px solid var(--line); border-radius:12px; overflow:hidden; }
-    .snowball h2 { margin:0 0 6px; color:var(--navy); font-size:22px; text-align:center; }
-    .snowball-intro { margin:0 auto 22px; max-width:760px; color:var(--muted); line-height:1.55; text-align:center; }
-    .snowball-loop { display:flex; align-items:center; justify-content:center; gap:8px; margin:0; padding:0 0 8px; list-style:none; overflow-x:auto; }
-    .snowball-step { flex:0 0 auto; display:grid; place-content:center; aspect-ratio:1; padding:12px; text-align:center; border-radius:50%; background:#eaf3fb; color:var(--navy); border:2px solid #8ebee5; line-height:1.3; font-size:13px; font-weight:700; }
-    .snowball-step small { display:block; margin-top:5px; color:var(--muted); font-size:11px; font-weight:500; }
-    .snowball-step:nth-child(1){width:108px}.snowball-step:nth-child(3){width:120px}.snowball-step:nth-child(5){width:132px}.snowball-step:nth-child(7){width:144px}.snowball-step:nth-child(9){width:156px}.snowball-step:nth-child(11){width:168px;background:#fff3d1;border-color:var(--accent)}
-    .snowball-arrow { flex:0 0 auto; color:var(--blue); font-size:24px; font-weight:700; }
-    .cash-title { margin:22px 0 10px; color:var(--navy); font-size:16px; text-align:center; }
-    .cash-waterfall { display:flex; align-items:stretch; justify-content:center; gap:7px; margin:0; padding:0; list-style:none; }
-    .cash-item { display:flex; align-items:center; justify-content:center; flex:1 1 0; min-width:120px; padding:11px 10px; border-radius:9px; background:#eef4f8; color:var(--navy); text-align:center; line-height:1.35; font-size:12px; font-weight:700; }
-    .cash-item:last-child { background:#fff3d1; }
-    .cash-arrow { display:grid; place-content:center; color:var(--blue); font-size:19px; font-weight:700; }
-    .return-paths { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:10px; margin-top:14px; }
-    .return-path { padding:13px 14px; border-radius:10px; background:#f7f9fb; border-top:3px solid var(--blue); color:var(--muted); line-height:1.45; font-size:13px; }
-    .return-path strong { display:block; margin-bottom:4px; color:var(--navy); }
-    .return-path.cash { border-top-color:var(--accent); }
-    .snowball-return { margin:20px auto 0; max-width:760px; padding:12px 16px; color:#e6eef5; background:var(--navy); border-radius:10px; text-align:center; line-height:1.5; }
-    .snowball-return strong { color:#ffd166; }
-    footer { margin-top:20px; color:var(--muted); font-size:12px; }
-    @media (max-width:900px) { .canvas { grid-template-columns:repeat(2,1fr); grid-template-areas:"segments segments" "value value" "partners activities" "resources channels" "relationships revenue" "cost cost"; } }
-    @media (max-width:900px) { .snowball-loop { flex-direction:column; overflow:visible; } .snowball-arrow { transform:rotate(90deg); } .cash-waterfall { flex-direction:column; } .cash-arrow { transform:rotate(90deg); } .return-paths { grid-template-columns:1fr; } }
-    @media (max-width:560px) { .wrap { padding:26px 14px 40px; } .canvas { display:flex; flex-direction:column; } .card { min-height:auto; } .snowball { padding:22px 12px; } }
-  </style>
+  <meta name="description" content="Company Blueprint สำหรับการหารือร่วมกันของ Partner ของ Circle Holding Company">
+  <title>Circle Holding Company — Partner Blueprint</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <main class="wrap">
-    <header>
-      <h1>Circle Holding Company — Business Model Canvas</h1>
-      <p class="lead">Operating Holding ที่ลงทุนและเข้าไปยกระดับการบริหาร เปลี่ยนธุรกิจที่พึ่งเจ้าของให้เป็นระบบที่วัดผล ทำซ้ำ และขยายได้</p>
-    </header>
-    <section class="canvas" aria-label="Business Model Canvas">
-      <article class="card partners"><h2>พันธมิตรหลัก</h2><ul><li>ทนายและนักบัญชี</li><li>ผู้สอบบัญชีและที่ปรึกษา</li><li>ธนาคารและนักลงทุนร่วมที่ต้องทดสอบ</li><li>ผู้เชี่ยวชาญรายอุตสาหกรรม</li></ul></article>
-      <article class="card activities"><h2>กิจกรรมหลัก</h2><ul><li>หาและคัดกรองดีล</li><li>ตรวจสอบและวางโครงสร้าง</li><li>ส่งต่อเจ้าของและแผน 100 วัน</li><li>วางระบบ ติดตาม และจัดสรรทุน</li></ul></article>
-      <article class="card value"><h2>คุณค่าที่เสนอ</h2><p>ให้ผู้ขายมีทาง Exit ที่น่าเชื่อถือ ทำให้บริษัทย่อยเป็นระบบ วัดผล ทำซ้ำและขยายได้ พร้อมสร้างเงินสดและมูลค่าระยะยาวแก่ผู้ถือหุ้น</p></article>
-      <article class="card relationships"><h2>ความสัมพันธ์</h2><ul><li>ก่อนซื้อ: ไว้วางใจ โปร่งใส รักษาความลับ</li><li>ช่วงส่งต่อ: บทบาทและ Milestone ชัด</li><li>หลังซื้อ: แยกผู้ถือหุ้น Board และผู้บริหาร</li></ul></article>
-      <article class="card segments"><h2>กลุ่มเป้าหมาย</h2><p>กลุ่มหลักคือเจ้าของ SME ไทยแบบ B2B ที่ต้องการ Exit หรือส่งต่อกิจการ; Growth Capital เป็นกลุ่มรองที่ต้องยอมรับการกำกับร่วมกัน</p></article>
-      <article class="card resources"><h2>ทรัพยากรหลัก</h2><ul><li>เงินทุน</li><li>ทีมลงทุนและทีมปฏิบัติการ</li><li>ระบบข้อมูลและรายงาน</li><li>เครือข่ายและธรรมาภิบาล</li></ul></article>
-      <article class="card channels"><h2>ช่องทาง</h2><p>ยืนยันแล้ว: ทนายส่วนตัวและนักบัญชี; ต้องทดสอบ: ผู้ประกอบการ ธนาคาร และพันธมิตรอื่น โดยแยกผู้แนะนำออกจากผู้ตรวจสอบดีล</p></article>
-      <article class="card revenue"><h2>กระแสผลตอบแทน</h2><ul><li>กำไรและเงินสดจากลูกค้าภายนอกที่จ่ายเป็นเงินปันผลเมื่อผ่าน Gate</li><li>เงินขายสุทธิจาก Exit</li><li>รายการภายในกลุ่มไม่ใช่ผลตอบแทนใหม่; NAV ที่เพิ่มขึ้นยังไม่ใช่เงินสด</li></ul></article>
-      <article class="card cost"><h2>โครงสร้างต้นทุน</h2><p>แยก Capital Deployed, ค่าใช้จ่ายของ Holding และ OPEX/CAPEX ของบริษัทย่อย เพื่อไม่ให้เงินลงทุนปะปนกับต้นทุนดำเนินงาน</p></article>
-    </section>
-    <aside class="strategy"><strong>Lifecycle ที่ใช้ตัดสินใจ</strong><p>Hold &amp; Improve 12–24 เดือน → Core Holding หรือ Exit Candidate · ถือยาวเป็นค่าเริ่มต้น ขายเมื่อการจัดสรรทุนใหม่คุ้มกว่าอย่างชัดเจน</p></aside>
-    <section class="snowball" aria-labelledby="snowball-title">
-      <h2 id="snowball-title">Circle Holding Company — Cash &amp; Value Snowball Loop</h2>
-      <p class="snowball-intro">ผลตอบแทนจะวนกลับได้เมื่อบริษัทย่อยสร้างเงินสดจริง กันเงินที่กิจการต้องใช้ก่อน แล้วจึงจ่ายส่วนเกินเป็นเงินปันผลเมื่อผ่าน Gate ให้ Circle Holding Company จัดสรรทุนรอบถัดไป</p>
-      <ol class="snowball-loop" aria-label="วงจรการเติบโตของ Circle Holding Company">
-        <li class="snowball-step">ทุนเริ่มต้น<small>ผู้ก่อตั้ง → Holding</small></li><li class="snowball-arrow" aria-hidden="true">→</li>
-        <li class="snowball-step">เข้าซื้อกิจการ<small>ผ่าน Investment Gate</small></li><li class="snowball-arrow" aria-hidden="true">→</li>
-        <li class="snowball-step">บริษัทย่อย<small>ส่งมอบและรับเงินลูกค้า</small></li><li class="snowball-arrow" aria-hidden="true">→</li>
-        <li class="snowball-step">Reserve Policy<small>Floor 6 เดือน + Stress/ภาระเพิ่ม</small></li><li class="snowball-arrow" aria-hidden="true">→</li>
-        <li class="snowball-step">เงินปันผล<small>ผ่าน Dividend Gate + มติครบ</small></li><li class="snowball-arrow" aria-hidden="true">→</li>
-        <li class="snowball-step">จัดสรรทุน<small>Holding Floor 12 เดือน + Stress → เทียบทุกทางเลือก</small></li>
-      </ol>
-      <h3 class="cash-title">เงินสดของบริษัทย่อยต้องผ่านลำดับนี้ก่อนพิจารณาจ่ายปันผล</h3>
-      <ol class="cash-waterfall" aria-label="ลำดับการคำนวณเงินสดที่จัดสรรได้">
-        <li class="cash-item">รายได้ตามงบ (Accrual)</li><li class="cash-arrow" aria-hidden="true">→</li>
-        <li class="cash-item">หักต้นทุน/OPEX → EBITDA</li><li class="cash-arrow" aria-hidden="true">→</li>
-        <li class="cash-item">หักภาษีและหนี้</li><li class="cash-arrow" aria-hidden="true">→</li>
-        <li class="cash-item">ปรับ ΔNWC และหัก Maintenance CAPEX</li><li class="cash-arrow" aria-hidden="true">→</li>
-        <li class="cash-item">Reserve Policy: Floor 6 เดือน + Stress</li><li class="cash-arrow" aria-hidden="true">→</li>
-        <li class="cash-item">Cash Available → Legal Dividend Gate</li>
-      </ol>
-      <div class="return-paths">
-        <div class="return-path cash"><strong>1 · ผลตอบแทนเงินสด</strong>เงินส่วนเกินจะไหลกลับ Circle Holding Company เมื่อผ่าน Reserve Gate, กำไร/ทุนสำรองตามกฎหมาย, HoldCo Consent และมตินิติบุคคลครบ แล้วจึงนำไปจัดสรรใหม่</div>
-        <div class="return-path"><strong>2 · จัดสรรทุนใหม่</strong>หลังผ่าน Holding Reserve Policy ซึ่งมี Floor 12 เดือนและอาจสูงกว่าตาม Integrated Stress ให้เทียบ Growth CAPEX ของบริษัทย่อยเดิม ระบบกลาง และดีลใหม่ด้วยผลตอบแทนปรับความเสี่ยงและเวลาทีมชุดเดียวกัน</div>
-        <div class="return-path"><strong>3 · มูลค่ากิจการเพิ่ม</strong>เป็น NAV ที่สูงขึ้นแต่ยังไม่ใช่เงินสด จนกว่าจะขายบางส่วนหรือทั้งหมดและรับเงินขายสุทธิ</div>
+  <header class="site-header">
+    <div class="nav-wrap">
+      <a class="brand" href="index.html" aria-label="Circle Holding Company — หน้าแรก">
+        <span class="brand-mark" aria-hidden="true">CH</span>
+        <span>Circle Holding Company</span>
+      </a>
+      <nav class="site-nav" aria-label="หัวข้อ Partner Blueprint">
+        <a class="nav-link" href="index.html" aria-current="page">ภาพรวม</a>
+        <a class="nav-link" href="investment-model.html">Investment Model</a>
+        <a class="nav-link" href="operating-governance.html">Operating &amp; Governance</a>
+        <a class="nav-link" href="capital-portfolio.html">Capital &amp; Portfolio</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page-shell">
+    <section class="hero">
+      <p class="eyebrow">Partner Blueprint · หน้า 1 จาก 4</p>
+      <h1>โครงสร้างหลักของ Circle Holding Company</h1>
+      <p class="hero-copy">กรอบสำหรับคุยให้ตรงกันว่าเราจะซื้อกิจการแบบไหน สร้างมูลค่าอย่างไร แบ่งอำนาจกันแบบใด และนำเงินสดกลับไปสร้างพอร์ตอย่างมีวินัย</p>
+      <div class="hero-actions">
+        <a class="button" href="investment-model.html">เริ่มคุย Investment Model →</a>
+        <a class="button secondary" href="#decisions">ดูเรื่องที่ยังต้องตัดสินใจ</a>
       </div>
-      <p class="snowball-return"><strong>↻ รอบถัดไป:</strong> เงินปันผล + เงินขายสุทธิ + ระบบ + ทีมผู้บริหารที่แข็งแรงขึ้น ถูกนำไปซื้อและพัฒนาบริษัทย่อยถัดไป โดยต้องผ่านเกณฑ์เงินสำรองและกำลังทีมก่อน</p>
+      <div class="status-row" aria-label="สถานะหลัก">
+        <span class="pill">Acquisition-led</span>
+        <span class="pill">Operating Holding</span>
+        <span class="pill">Hold long-term by default</span>
+        <span class="pill">Framework coverage 12/12</span>
+      </div>
     </section>
-    <footer>สถานะ 2026-09-05: BMC มีร่างครบ 9/9 ช่อง · Principal Framework และ Template เสร็จระดับหลักการ · ตัวเลขรายบริษัทย่อยต้องกรอกเมื่อมีดีลจริง</footer>
+
+    <section class="section" aria-labelledby="north-star-title">
+      <div class="section-heading">
+        <h2 id="north-star-title">North Star</h2>
+        <p>ประโยคเดียวที่ใช้ตรวจว่าทุกนโยบายและทุกดีลยังไปในทิศทางเดียวกันหรือไม่</p>
+      </div>
+      <div class="north-star">Circle Holding Company รับช่วง SME ไทยพื้นฐานดีและสร้างเงินสด เปลี่ยนธุรกิจที่พึ่งเจ้าของให้เป็นระบบที่วัดผล ทำซ้ำ และขยายได้ แล้วนำเงินสดและความสามารถที่สะสมไปลงทุนรอบถัดไป โดยไม่โตเร็วกว่าทุน เงินสำรอง และความสามารถของทีม</div>
+    </section>
+
+    <section class="section" aria-labelledby="chapters-title">
+      <div class="section-heading">
+        <h2 id="chapters-title">คุยแยกเป็น 3 บท</h2>
+        <p>กดเข้าแต่ละหน้าเพื่อคุยเฉพาะเรื่อง หน้าอื่นจะไม่ปนเข้ามา</p>
+      </div>
+      <div class="grid three">
+        <a class="card card-link blue" href="investment-model.html">
+          <span class="card-number">02 · INVESTMENT</span>
+          <h3>เราจะซื้ออะไรและซื้ออย่างไร</h3>
+          <p>Target, ข้อห้าม, รูปแบบเข้าซื้อ, Investment Gate และเกณฑ์คืนทุน</p>
+          <span class="link-label">เปิด Investment Model →</span>
+        </a>
+        <a class="card card-link green" href="operating-governance.html">
+          <span class="card-number">03 · OPERATING</span>
+          <h3>หลังซื้อ ใครทำอะไร</h3>
+          <p>แผน 3–6 เดือน บทบาท HoldCo/Board/Management และ DOA</p>
+          <span class="link-label">เปิด Operating &amp; Governance →</span>
+        </a>
+        <a class="card card-link accent" href="capital-portfolio.html">
+          <span class="card-number">04 · CAPITAL</span>
+          <h3>เงินสดจะวนกลับอย่างไร</h3>
+          <p>Reserve 6/12 เดือน Dividend Gate การจัดสรรทุน Snowball และ Exit</p>
+          <span class="link-label">เปิด Capital &amp; Portfolio →</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="model-title">
+      <div class="section-heading">
+        <h2 id="model-title">โมเดลในภาพเดียว</h2>
+        <p>การเพิ่มจำนวนบริษัทไม่ใช่เป้าหมาย หากเงินสด ระบบ และทีมไม่แข็งแรงขึ้นพร้อมกัน</p>
+      </div>
+      <div class="flow" aria-label="วงจรภาพรวมของ Circle Holding Company">
+        <div class="flow-step"><strong>คัดกิจการ</strong><span>SME พื้นฐานดี มีเงินสด และมีคันโยกสร้างมูลค่า</span></div>
+        <div class="flow-step"><strong>เข้าควบคุม</strong><span>ออกแบบราคา อำนาจ Operator และแผนส่งต่อก่อนปิดดีล</span></div>
+        <div class="flow-step"><strong>สร้างระบบ</strong><span>คน SOP ข้อมูล การเงิน การขาย การส่งมอบ และ Governance</span></div>
+        <div class="flow-step"><strong>สร้างเงินสด</strong><span>กันภาระและ Reserve ของบริษัทย่อยก่อนจ่ายปันผล</span></div>
+        <div class="flow-step"><strong>จัดสรรใหม่</strong><span>กัน Reserve ของ Holding แล้วเทียบทุกทางเลือกด้วยเกณฑ์เดียวกัน</span></div>
+      </div>
+    </section>
+
+    <section class="section" id="decisions" aria-labelledby="decisions-title">
+      <div class="section-heading">
+        <h2 id="decisions-title">สถานะสำหรับคุยกับ Partner</h2>
+        <p>แยกสิ่งที่ตกลงแล้วออกจากสิ่งที่ยังต้องเลือกร่วมกันอย่างชัดเจน</p>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>มิติ</th><th>สถานะ</th><th>ความหมาย</th></tr></thead>
+          <tbody>
+            <tr><td>Principal Framework</td><td><span class="tag confirmed">12/12 มีกรอบแล้ว</span></td><td>Direction, Investment, Operating, Governance, Capital และ Lifecycle เชื่อมกันแล้ว</td></tr>
+            <tr><td>Policy Decision Readiness</td><td><span class="tag working">10/12 พร้อมใช้ระดับหลักการ</span></td><td>ตัวเลขบางส่วนยังต้อง Calibration เมื่อมีดีลจริง</td></tr>
+            <tr><td>Target / Portfolio Limits</td><td><span class="tag open">ต้องตัดสินใจ</span></td><td>Sector, Deal Size, Ownership Floor และ Concentration Limit</td></tr>
+            <tr><td>Capital Allocation Hurdle</td><td><span class="tag open">ต้องตัดสินใจ</span></td><td>เกณฑ์ขั้นต่ำที่ใช้เทียบลงทุนเดิม ระบบกลาง ดีลใหม่ และคืนทุนผู้ถือหุ้น</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <nav class="page-actions" aria-label="ไปหน้าถัดไป">
+      <span></span>
+      <a class="button" href="investment-model.html">ถัดไป: Investment Model →</a>
+    </nav>
   </main>
+
+  <footer class="site-footer">Circle Holding Company · Partner discussion material · อัปเดต 5 กันยายน 2026</footer>
 </body>
 </html>
